@@ -91,6 +91,25 @@ main :: IO ()
 main = do
  print (addNumbers 19 17)
 -- output is = 36
+-- HC1T7 A function that takes the temperature in Fahrenheit and returns it in Celsius
+fToC x = (x - 32) * 5 / 9
+
+main :: IO ()
+main = do 
+ print (fToC 212)
+ --output is = 100.00
+ --HC1T8 applytwice Increment function (adds 8)
+increment :: Int -> Int
+increment x = x + 8
+
+-- applyTwice applies a function twice to a value
+applyTwice :: (a -> a) -> a -> a
+applyTwice f x = f (f x)
+
+main :: IO ()
+main = do
+  print (applyTwice increment 5)  
+  --output is = 21
 
 
 
