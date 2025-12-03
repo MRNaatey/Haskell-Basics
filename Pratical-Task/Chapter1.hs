@@ -48,7 +48,15 @@ main :: IO()
 main = do
  print (greaterThan18 17)
  --output is = false
+ 
+ -- HCIT 6 Takes two integers and returns their sum
+addNumbers :: Int -> Int -> Int
+addNumbers x y = x + y
 
+main :: IO ()
+main = do
+ print (addNumbers 19 17)
+-- output is = 36
 
 
 
