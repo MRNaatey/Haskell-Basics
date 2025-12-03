@@ -41,7 +41,13 @@ main = do
   print (circleArea 9)
   --output is = 254.46900494077323
 
+greaterThan18 :: Int -> Bool
+greaterThan18 x = x > 18
 
+main :: IO()
+main = do
+ print (greaterThan18 17)
+ --output is = false
 
 
 
