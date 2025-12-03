@@ -30,3 +30,21 @@ main :: IO ()
 main = do
  print $ doubleThenincrement 6
  --output is 13
+
+circleArea :: Double -> Double
+circleArea r = area
+  where
+    area = pi * r * r
+
+main :: IO ()
+main = do
+  print (circleArea 9)
+  --output is = 254.46900494077323
+
+
+
+
+
+
+
+
