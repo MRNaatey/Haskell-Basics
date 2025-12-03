@@ -49,6 +49,15 @@ main = do
  print (greaterThan18 17)
  --output is = false
  
+ --HCIT5 create a function that extract the first x terms from an infinite list
+giveMe :: Int -> [Int]
+giveMe x = take x [1..]
+
+main :: IO ()
+main = do
+  print (giveMe 7) 
+  -- output is = [1,2,3,4,5,6,7]
+  
  -- HCIT 6 Takes two integers and returns their sum
 addNumbers :: Int -> Int -> Int
 addNumbers x y = x + y
