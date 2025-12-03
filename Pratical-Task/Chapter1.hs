@@ -48,6 +48,31 @@ main :: IO()
 main = do
  print (greaterThan18 17)
  --output is = false
+ import Data.List (sortBy)
+import Data.Ord (comparing)
+
+-- Extract player names from a list of (name, score) tuples
+extractPlayers :: [(String, Int)] -> [String]
+extractPlayers players = [name | (name, _) <- players]
+
+-- Sort the list of players by score in descending order
+sortByScore :: [(String, Int)] -> [(String, Int)]
+sortByScore players = sortBy (comparing (negate . snd)) players
+
+-- Return the top three players (name and score)
+topThree :: [(String, Int)] -> [(String, Int)]
+topThree players = take 3 players
+
+-- Compose all functions to get the top three player names
+getTopThreePlayers :: [(String, Int)] -> [String]
+getTopThreePlayers = extractPlayers . topThree . sortByScore
+
+-- Main function to test getTopThreePlayers
+main :: IO ()
+main = do
+  let playerData = [("Harding", 50), ("Prince", 75), ("Calvin", 100), ("Diana", 90)]
+  print (getTopThreePlayers playerData)  
+  --output is = ["Calvin","Diana","Prince"]
  
  --HCIT5 create a function that extract the first x terms from an infinite list
 giveMe :: Int -> [Int]
