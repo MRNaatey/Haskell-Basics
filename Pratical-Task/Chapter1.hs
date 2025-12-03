@@ -13,3 +13,20 @@ main :: IO ()
 main = do
  print $ increment 5
  --output is = 6
+
+double :: Int -> Int
+double x = x * 2
+
+increment :: Int -> Int
+increment x = x + 1
+
+doubleThenincrement :: Int -> Int
+doubleThenincrement x = increment (double x)
+  where 
+    double n = n * 2
+    increment n = n + 1
+  
+main :: IO ()
+main = do
+ print $ doubleThenincrement 6
+ --output is 13
