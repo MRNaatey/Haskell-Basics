@@ -1,5 +1,5 @@
-import Data.List (sortBy)
-import Data.Ord (comparing)
+import Data.List 
+import Data.Ord 
 
 ------------------------------------------------------------
 -- HC1T1 – Task 1: Function Composition
