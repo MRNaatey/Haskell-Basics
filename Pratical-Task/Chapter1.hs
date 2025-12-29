@@ -1,22 +1,19 @@
-import Data.List 
-import Data.Ord 
 
 ------------------------------------------------------------
 -- HC1T1 – Task 1: Function Composition
 ------------------------------------------------------------
-
--- double multiplies a number by 2
 double :: Int -> Int
 double x = x * 2
-
 -- increment increases a number by 1
 increment :: Int -> Int
 increment x = x + 1
-
 -- doubleThenIncrement applies double first and then increment
 doubleThenIncrement :: Int -> Int
 doubleThenIncrement x = increment (double x)
-
+main :: IO()
+main = do
+  print (doubleThenIncrement 6 )
+  -- the output is 13
 
 ------------------------------------------------------------
 -- HC1T2 – Task 2: Pure Function Example
